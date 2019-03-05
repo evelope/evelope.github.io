@@ -1,7 +1,7 @@
 export default {
   items: [
     {
-      name: 'Dashboard',
+      name: '主页',
       url: '/dashboard',
       icon: 'icon-speedometer',
       badge: {
@@ -11,7 +11,7 @@ export default {
     },
     {
       title: true,
-      name: 'Theme',
+      name: '主题',
       class: '',
       wrapper: {
         element: '',
@@ -19,18 +19,18 @@ export default {
       }
     },
     {
-      name: 'Colors',
+      name: '颜色',
       url: '/theme/colors',
       icon: 'icon-drop'
     },
     {
-      name: 'Typography',
+      name: '布局',
       url: '/theme/typography',
       icon: 'icon-pencil'
     },
     {
       title: true,
-      name: 'Components',
+      name: '组件',
       class: '',
       wrapper: {
         element: '',
