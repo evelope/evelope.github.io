@@ -1,12 +1,24 @@
 <template>
   <div class="app">
     <AppHeader fixed>
-      <SidebarToggler class="d-lg-none" display="md" mobile />
+      <SidebarToggler class="d-lg-none" display="md" mobile/>
       <b-link class="navbar-brand" to="#">
-        <img class="navbar-brand-full" src="img/brand/logo.svg" width="124" height="35" alt="CoreUI Logo">
-        <img class="navbar-brand-minimized" src="img/brand/sygnet.svg" width="30" height="30" alt="CoreUI Logo">
+        <img
+          class="navbar-brand-full"
+          src="img/brand/logo.svg"
+          width="124"
+          height="35"
+          alt="CoreUI Logo"
+        >
+        <img
+          class="navbar-brand-minimized"
+          src="img/brand/sygnet.svg"
+          width="30"
+          height="30"
+          alt="CoreUI Logo"
+        >
       </b-link>
-      <SidebarToggler class="d-md-down-none" display="lg" />
+      <SidebarToggler class="d-md-down-none" display="lg"/>
       <b-navbar-nav class="d-md-down-none">
         <b-nav-item class="px-3" to="/dashboard">主页</b-nav-item>
         <b-nav-item class="px-3" to="/users" exact>用户</b-nav-item>
@@ -25,7 +37,7 @@
         </b-nav-item>
         <DefaultHeaderDropdownAccnt/>
       </b-navbar-nav>
-      <AsideToggler class="d-none d-lg-block" />
+      <AsideToggler class="d-none d-lg-block"/>
       <!--<AsideToggler class="d-lg-none" mobile />-->
     </AppHeader>
     <div class="app-body">
@@ -62,13 +74,26 @@
 </template>
 
 <script>
-import nav from '@/_nav'
-import { Header as AppHeader, SidebarToggler, Sidebar as AppSidebar, SidebarFooter, SidebarForm, SidebarHeader, SidebarMinimizer, SidebarNav, Aside as AppAside, AsideToggler, Footer as TheFooter, Breadcrumb } from '@coreui/vue'
-import DefaultAside from './DefaultAside'
-import DefaultHeaderDropdownAccnt from './DefaultHeaderDropdownAccnt'
+import nav from "@/_nav";
+import {
+  Header as AppHeader,
+  SidebarToggler,
+  Sidebar as AppSidebar,
+  SidebarFooter,
+  SidebarForm,
+  SidebarHeader,
+  SidebarMinimizer,
+  SidebarNav,
+  Aside as AppAside,
+  AsideToggler,
+  Footer as TheFooter,
+  Breadcrumb
+} from "@coreui/vue";
+import DefaultAside from "./DefaultAside";
+import DefaultHeaderDropdownAccnt from "./DefaultHeaderDropdownAccnt";
 
 export default {
-  name: 'DefaultContainer',
+  name: "DefaultContainer",
   components: {
     AsideToggler,
     AppHeader,
@@ -85,18 +110,35 @@ export default {
     SidebarNav,
     SidebarMinimizer
   },
-  data () {
+  data() {
     return {
       nav: nav.items
-    }
+    };
   },
   computed: {
-    name () {
-      return this.$route.name
+    name() {
+      return this.$route.name;
     },
-    list () {
-      return this.$route.matched.filter((route) => route.name || route.meta.label )
+    list() {
+      return this.$route.matched.filter(
+        route => route.name || route.meta.label
+      );
     }
   }
-}
+};
 </script>
+<style scoped>
+.app .navbar-brand-full:hover {
+  filter: hue-rotate(0deg);
+  transition: filter 0.5s;
+  animation: filt 3s infinite linear;
+}
+@keyframes filt {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+</style>
