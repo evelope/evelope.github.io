@@ -11,7 +11,7 @@
 $ git clone https://github.com/evelope/evelope.github.io.git
 
 # go into app's directory
-$ cd CoreUI-Vue
+$ cd evelope.github.io
 
 # install app's dependencies
 $ npm install
