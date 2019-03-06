@@ -7,9 +7,9 @@
   "copyright": "Copyright 2018 creativeLabs Łukasz Holeczek",
   "license": "MIT",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
+    "serve": "vue-cli-service lint --fix && vue-cli-service serve",
+    "build": "vue-cli-service lint --fix && vue-cli-service build",
+    "lint": "vue-cli-service lint --fix",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e"
   },

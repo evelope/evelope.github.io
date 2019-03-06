@@ -1,9 +1,9 @@
 export default {
   items: [
     {
-      name: '主页',
+      name: '链接指南',
       url: '/dashboard',
-      icon: 'icon-speedometer',
+      icon: 'icon-pencil',
       badge: {
         variant: 'primary',
         text: 'NEW'
