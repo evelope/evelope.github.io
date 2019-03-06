@@ -62,7 +62,7 @@ export default {
     }
   },
   watch: {
-    inputValue(n, o) {
+    inputValue() {
       this.listInit();
       this.dashboardList.forEach(item => {
         if (item.header.includes(this.inputValue)) {
